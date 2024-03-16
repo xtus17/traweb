@@ -1,0 +1,593 @@
+@font-face {
+    font-family: "Aileron-Black";
+    src: url("./../Assets/font/Aileron-Black.otf");
+   
+  }
+  
+  @font-face {
+    font-family: "Aileron-Black-Italic";
+    src: url("./../Assets/font/Aileron-BlackItalic.otf");
+  }
+  
+  @font-face {
+    font-family: "Aileron-Bold";
+    src: url("./../Assets/font/Aileron-Bold.otf");
+  }
+  
+  @font-face {
+    font-family: "Aileron-Regular";
+    src: url("./../Assets/font/Aileron-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: "Aileron-SemiBold";
+    src: url("./../Assets/font/Aileron-SemiBold.otf");
+  }
+  
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url("./../Assets/font/Montserrat-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Montserrat-Medium";
+    src: url("./../Assets/font/Montserrat-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("./../Assets/font/Montserrat-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url("./../Assets/font/Poppins-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("./../Assets/font/Poppins-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppins-Thin";
+    src: url("./../Assets/font/Poppins-Thin.ttf");
+  }
+  
+  /************************************** Login Register **************************************/
+  .containergeneral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 8vh;
+  }
+  
+  .logo {
+    position: relative;
+    width: 8vw;
+    place-content: center;
+    margin-top: 2.5vh;
+  }
+  
+  .title {
+    color: rgb(0, 0, 0);
+    margin-top: 1vh;
+    font-size: 15px;
+    font-family: Poppins-SemiBold;
+    font-weight: bold;
+  }
+  
+  a {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /************************************** Login Register **************************************/
+  
+  /************************************** Footer **************************************/
+  .footer {
+    color: #000000;
+    font-family: Poppins-SemiBold;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .footerimg {
+    height: 20px;
+    width: 20px;
+    bottom: 0.01vh;
+    transition: width 0.3s, height 0.3s;
+  }
+  
+  .footerimg:hover {
+    width: 39px;
+    height: 39px;
+  }
+  /************************************** Footer **************************************/
+  
+  /************************************** Modal **************************************/
+  .modal {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-open {
+    display: grid;
+  }
+  
+  .modal-dial {
+    background: rgb(255, 255, 255);
+    padding: 0.5rem;
+    width: 20vw;
+    height: 27vh;
+    border-radius: 30px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-dial p {
+    padding: 0px;
+    font-family: Aileron-Black;
+    text-align: center;
+  }
+  
+  .button-error {
+    border: none;
+    text-align: center;
+    border-radius: 6px;
+    height: 5vh;
+    width: 20vw;
+    cursor: pointer;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 140, 255);
+    color: rgb(255, 255, 255);
+  }
+  
+  .error {
+    font-family: Aileron-Black;
+    font-size: 22px;
+    width: 1200px;
+  }
+  /************************************** Modal **************************************/
+  
+  /************************************** Cargando **************************************/
+  .loadcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .load {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    place-content: center;
+    margin-top: 8%;
+    text-align: center;
+    margin: 0 auto; /* CENTRAR VERTICAL */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /************************************** Cargando **************************************/
+  
+  /************************************** Navbar **************************************/
+  .navbar {
+    margin: 0;
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(65, 65, 216);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-SemiBold";
+  }
+  
+  .navbar-menu {
+    margin-top: 0;
+    display: flex;
+    list-style: none;
+    margin-right: 25px;
+  }
+  
+  .navbar-logo {
+    margin-top: 0;
+    line-height: 8vh; /* alinear centro altura segun contenedor*/
+    padding: 0 40px;
+  }
+  
+  a {
+    color: #e8ebec;
+    text-decoration: none;
+  }
+  
+  .navbar-menu-item-ul {
+    list-style: none;
+    padding: 0;
+    line-height: 5vh;
+  }
+  
+  .navbar-menu-item-li {
+    color: #000000;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-menu-li {
+    margin: 0 15px;
+    line-height: 8vh;
+    width: max-content; /* *Si tiene varias palabras no las recorta*/
+  }
+  
+  .navbar-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .suggestion.active {
+    font-size: 5vh;
+  }
+  
+  .navbar-toggle img {
+    height: 6vh;
+    line-height: 10vh;
+    display: none;
+  }
+  
+  .icons {
+    color: white;
+    font-size: 5vh;
+    line-height: 10vh;
+  }
+  /************************************** Navbar **************************************/
+  
+  /************************************** Navbar Mobile **************************************/
+  @media (max-width: 768px) {
+    .navbar {
+      height: 6vh;
+    }
+  
+    .navbar-logo {
+      margin-top: 0;
+      line-height: 6vh; /* alinear centro altura segun contenedor*/
+      padding: 0 25px;
+    }
+  
+    .navbar-menu-item-ul {
+      list-style: none;
+      padding: 0;
+      line-height: 10vh;
+    }
+  
+    a {
+      color: #ffffff;
+    }
+  
+    .navbar-menu-item-li {
+      color: #ffffff;
+    }
+  
+    .navbar-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0px;
+      margin-right: 25px;
+      background-color: rgb(34, 31, 60);
+      position: fixed;
+      left: 100%;
+      top: 6vh;
+      height: 92vh;
+      width: 100vw;
+      padding: 20px 0; /* padding se agrega al detectar ul */
+      overflow-y: auto; /* para movil */
+      transition: lef 0.3s;
+    }
+  
+    .navbar-menu-visible {
+      left: 0%;
+    }
+  
+    .navbar-menu-li {
+      line-height: 70px;
+    }
+  
+    a:hover {
+      color: rgb(98, 255, 0);
+    }
+  
+    .navbar-toggle img {
+      height: 4vh;
+      line-height: 6vh;
+      display: block;
+    }
+  
+    .navbar-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+  /************************************** Navbar Mobile **************************************/
+  
+  /************************************** Logueado **************************************/
+  .containerform {
+    background-color: #e8ebec;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .card-form {
+    background-color: #f8f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    box-shadow: 2px px 2px 2px black;
+    width: 25vw;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3vh;
+  }
+  
+  .bodyform {
+    width: 100vw;
+    padding-top: 20px;
+  }
+  
+  .custom-select {
+    margin-top: 8%;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 18vw;
+    height: 5vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .select-items div:hover,
+  .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  textarea {
+    margin-top: 8%;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 18vw;
+    height: 15vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: transparent;
+    text-align: center;
+  }
+  /************************************** Logueado **************************************/
+  
+  /*Mobil   */
+  @media screen and (max-width: 850px) {
+    .footer {
+      margin-top: 6%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 6px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .card {
+      /*grid-template-columns: 100%;*/
+      height: 90%;
+      width: 96%;
+      left: 2%;
+      right: 2%;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .back {
+      font-size: 2.3vw;
+      top: 93%;
+      left: 75%;
+    }
+  }
+  
+  .img404 {
+    position: relative;
+    width: 60vw;
+    place-content: center;
+    margin-top: 5vh;
+  }
+  
+  /***** AXE playgoogle (accesibilidad) ****/
+  
+  .contenedor {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    margin-top: 13vh;
+  }
+  
+  .containertable {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .dispel {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+  }
+  
+  .dispel > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .dispelButton:hover {
+    opacity: 0.07;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+    color: #000000;
+  }
+  
+  .wra {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+  
+  .leaflet-container {
+    width: 100%;
+    height: 91.8vh;
+  }
+  
+  .marker-cluster-custom {
+    background: #dda808;
+    border: 4.5px solid #ecd29c;
+    border-radius: 50%;
+    color: #000000;
+    /*  height: 40px;*/
+    /*  line-height: 37px;*/
+    /*  width: 40px;*/
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    line-height: 28px;
+  }
+  
+  .markerClusterSmall {
+    border-radius: 20px;
+  
+    background: #0e8d91;
+    border: 2.5px solid #ffffff;
+    line-height: 28px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .markerClusterMedium {
+    border-radius: 40px;
+    background: #8813a9;
+    border: 2.5px solid #ffffff;
+    line-height: 28px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .markerClusterLarge {
+    border-radius: 70px;
+    background: #5f8709;
+    border: 2.5px solid #ecd29c;
+    line-height: 28px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .markerClusterLargeXL {
+    border-radius: 70px;
+    background: #dd1a08;
+    border: 2.5px solid #ecd29c;
+    line-height: 28px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 900;
+  }
+  .markerClusterLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clusterIconAsesinato {
+    background: url("https://img.icons8.com/ios-filled/25/000000/crime.png");
+  }
+  
+  .clusterIconAgresion {
+    background: url("https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/25/000000/external-settings-coding-kiranshastry-lineal-color-kiranshastry.png");
+  }
+  
+  .clusterIconPersona {
+    background: url("https://img.icons8.com/external-glyph-on-circles-amoghdesign/25/000000/external-communication-law-crime-and-justice-glyph-on-circles-amoghdesign.png");
+  }
+  
+  .clusterIconRobo {
+    background: url("https://img.icons8.com/color/25/000000/fat-cop.png");
+  }
+  
+  .clusterIconVandalismo {
+    background: url("https://img.icons8.com/emoji/25/000000/police-car-light.png");
+  }
+  
+  .clusterIconViolencia {
+    background: url("https://img.icons8.com/color/25/000000/slr-camera.png");
+  }
+  
+  .clusterIconOtro {
+    background: url("https://img.icons8.com/external-others-iconmarket/25/000000/external-marker-user-interface-others-iconmarket.png");
+  }
+  
+  .imageTerm {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    width: 40vw;
+    padding-top: 30vh;
+    position: absolute;
+  }
+  
+  .tituloTerm {
+    font-weight: bold;
+    padding-top: 40vh;
+    font-size: x-large;
+    text-align: center;
+  }
+  
+  .parrafoTerm {
+    justify-content: center;
+  }
+  
+  .negrita {
+    font-weight: bold;
+  }
+  
